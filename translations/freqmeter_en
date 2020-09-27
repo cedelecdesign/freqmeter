@@ -1,0 +1,52 @@
+<< Frequency meter English translation file >>
+[:freqmeter,34
+Waiting for connection...
+&Exit
+Exit to system
+&Settings
+Configure serial port
+&Connect
+Connetion to Arduino
+&About
+About software
+&Help
+Help
+&File
+Fast
+Slow
+Hold
+Sample rate
+Auto range
+Show graph
+Meter
+Settings
+Exit
+System
+Frequency:     
+Period:        
+Frequency counter
+Exit to system?
+Are you sure you want to exit?
+Getting data from serial
+Error reading data!
+Connection to {} successfull!
+Connect
+Disconnect
+Language
+Scale
+
+[:helpdialogs,2
+User manual
+File {} not found
+
+[:serial,10
+Serial configuration
+Scan
+Baud rate
+Data bits
+Parity
+Stop bits
+None
+Even
+Odd
+Unsupported platform

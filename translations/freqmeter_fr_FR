@@ -1,0 +1,52 @@
+﻿<< Frequency meter french translation file >> 
+[:freqmeter,34
+En attente de connexion...
+&Quitter
+Quitter l'application
+&Paramètres
+Configurer le port série
+&Connecter
+Connexion a l'Arduino
+&A propos
+A propos du logiciel
+&Aide
+Aide
+&Fichier
+Rapide
+Lent
+Hold
+Vitesse éch.
+Auto range
+Graphique
+Mesures
+Paramètres
+Quitter
+Système
+Fréquence:     
+Période:       
+Fréquencemètre
+Quitter l'application?
+Êtes vous sur de vouloir quitter?
+Données reçues depuis le port série
+Erreur de lecture !
+Connexion au port {} réussie!
+Connecter
+Deconnecter
+Langue
+Echelle
+
+[:helpdialogs,2
+Mode d'emploi
+Fichier {} introuvable
+
+[:serial,10
+Configuration du port serie
+Scan
+Baud rate
+Bits de données
+Parité
+Bits d'arrêt
+Aucune
+Paire
+Impaire
+Plateforme non reconnue
