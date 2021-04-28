@@ -1,0 +1,51 @@
+  
+  >>> The poorman's  frequency counter <<<
+  
+  Released under GNU GPL license by Cedric Pereira
+  
+  Mode d'emploi:
+  
+  - Cliquer sur le bouton 'Paramètres' ou selectionner le menu 'Fichier->Paramètres'.
+  
+  Dans la boite de dialogue selectionnez les parametres corrects pour la connexion.
+  Utilisez le bouton 'Scan' si votre port n'apparait pas dans la liste. 
+  Il peut etre nécessaire de repeter l'operation plusieurs fois si vous venez de brancher le câble.
+  
+  Cliquez sur 'Ok'. Le bouton 'Connecter' est maintenant disponible.
+  Cliquez dessus ou selectionnez le menu 'Fichier -> Connecter' pour vous connecter a la carte Arduino.
+  La barre d'etat affiche alors 'Getting data from serial'.
+  Toutefois vous pouvez avoir pendant quelques secondes un message d'erreur 'Error reading data'. Ceci
+  est du au redemarrage de l'Arduino et a quelques données corrompues au depart, ne vous inquietez pas!
+  
+  - Le mode Autorange: si cette case est cochée (par defaut) le logiciel convertit automatiquement les unités
+    selon leur ordre de grandeur. Autrement l'affichage se fait en Hz et secondes.
+  
+  - Les modes Fast / slow: en mode lent (par defaut) la lecture se fait une fois par seconde.
+    En mode rapide la lecture se fait toutes les 100mS. Cela permet de voir des changements plus rapides de frequence
+    mais les mesures peuvent etre moins precises.
+  
+  - Le mode 'Hold' permet de figer l'affichage (mais la carte Arduino continue de faire les mesures)
+
+  - En cliquant sur 'Graphique' vous ouvrez une nouvelle fenetre montrant les valeurs recues sous forme
+    de graphique.
+    Les cases X et Ygrid permettent d'afficher ou non les grilles sur le graphique.
+    La case Ylog permet d'afficher l'axe Y avec une echelle logarithmique. Ceci est utile si vous avez
+    de tres fortes variations de frequence.
+
+  - Le facteur d'echelle : Vous pouvez selectionner un multiplicateur si vous utilisez un diviseur de frequence
+    externe. Ainsi vous aurez une lecture directe de la frequence.
+
+  - Cochez la case 'Fichier-> Utiliser le filtre' pour appliquer un traitement aux données avant affichage.
+    On peut editer le filtre via 'Fichier->Editer le filtre' ou en editant le fichier freqmeter/tools/datafilters.py.
+    Ce fichier contient la fonction 'filter' utilisée par le logiciel pour effectuer les traitements. Celle-ci doit être une fonction python valide.
+  	example:
+
+	def filter(value):
+		# soustrait 10Khz
+    		value -= 10000
+    		return value
+
+    - Sauvegarde des donées: faire un clic droit sur le graphique et selectionner 'Export'
+    Les données peuvent etre sauvegardées sous forme de copie d'ecran ou dans un fichier csv(pour tableur).
+    Toutefois, un bug dans le module pyqtgraph peut causer le crash du programme. Si tel est le cas veuillez vous
+    reporter aux instructions contenues dans le repertoire pyqtfix.

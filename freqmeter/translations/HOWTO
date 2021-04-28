@@ -1,0 +1,28 @@
+How to create a new translation:
+
+1- Edit the 'translations/lang.idx' file and add a new entry: Language,code,file (ex : English,en_US,freqmeter_en)
+This makes the new entry visible in the language selector dialog.
+
+2- Create a translation file (or edit an existing one).
+The file structure:
+	- first line is a description and is not used for translation but must be there.
+	- section: contains translations for a dialog.
+	  A section starts with [:section_name,number_of_lines  (ex: [:freqmeter,34
+		section_name: used for loading a section with my_strings_list = load_section(file_name, section_name)
+		number_of_lines: tells the load_section() function how many lines to load
+	  Then come the strings, each one in a new line.
+	  Sections are separated by a blank line.
+
+Using translations:
+
+# import loading tool
+from tools.langtranslate import load_section
+
+my_translations_file = 'translations/freqmeter_en'
+
+# populate a list of strings from a translation file
+my_translations_list = load_section(my_translations_file, 'freqmeter')
+
+# print the loaded strings
+for translation in my_translations_list:
+    print(translation)

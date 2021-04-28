@@ -1,0 +1,37 @@
+  
+  >>> The poorman's  frequency counter <<<
+  
+  Released under GNU GPL license by Cedric Pereira
+  
+  User manual:
+  
+  - Clic 'Settings' button or select 'File->Settings' menu.
+  
+  In the settings dialog select the right settings for your serial connection.
+  You can use the 'Scan' button to rescan serial ports if your port
+  doesn't appear in the list.(it can take some time for the system to discover a newly plugged cable !)
+  
+  Clic 'Ok' to quit settings window. If everything is ok the 'Connect' button is now available.
+  Clic it or select 'File->Connect' menu to connect to Arduino.
+  The status bar should display:"Getting data from serial ..."
+  Notice that you can have an error message:"Error reading data!". This is because most Arduino boards 
+  will reset before establishing a serial connection. So don't worry!
+
+  - Autorange mode : if you uncheck this box frequency will only be displayed in Hz ( 10kHz = 10000Hz).
+  
+  - Fast / slow mode : in slow mode frequency is measured every second.
+  Fast mode gives fastest readings but can be a bit less accurate.
+  
+  - Hold mode freezes the display (but Arduino still refreshes readings)
+
+  - Scale factor : You can select a multiplier if you're using an external frequency divider.
+    You will get a direct reading of the frequency.
+
+  - Clicking 'Show graph' button will display a new window where data is displayed as a graph.
+  X an Y grid check boxes make x and y grids visible or not.
+  When checked, the 'Ylog' check box will force y axis to be displayed in logarithmic scale. This is usefull
+  if you have wide frequency variations on input signal.
+  Saving graph data : right clic on the graph and select export. You can save a screenshot as an image or
+  save raw data in csv format.
+  Be aware tha saving an image (or copying to clipboard) can make the software crash.
+  This is due to an issue with pyqtgraph module. You will find instructions on how to fix it in pyqtfix folder.
